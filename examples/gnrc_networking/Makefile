@@ -2,7 +2,7 @@
 APPLICATION = gnrc_networking
 
 # If no BOARD is found in the environment, use this default:
-BOARD ?= native
+BOARD ?= arduino-due
 
 # This has to be the absolute path to the RIOT base directory:
 RIOTBASE ?= $(CURDIR)/../..
@@ -32,6 +32,8 @@ USEMODULE += shell_commands
 USEMODULE += ps
 USEMODULE += netstats_l2
 USEMODULE += netstats_ipv6
+
+USEMODULE += cc110x gnrc_netdev2 gnrc_cc110x
 
 # Set a custom 802.15.4 channel if needed
 DEFAULT_CHANNEL ?= 26
